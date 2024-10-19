@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Title -->
+    <title>About Us</title>
+
+    <!-- Required Meta Tags Always Come First -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../../favicon.png">
+
+    <!-- React and ReactDOM -->
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Rubik:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="../../assets/vendor/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../assets/css/font-mytravel.css">
+    <link rel="stylesheet" href="../../assets/vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/hs-megamenu/src/hs.megamenu.css">
+    <link rel="stylesheet" href="../../assets/vendor/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="../../assets/vendor/flatpickr/dist/flatpickr.min.css"> <!-- Fixed typo -->
+    <link rel="stylesheet" href="../../assets/vendor/bootstrap-select/dist/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your separate CSS file -->
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-lg relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo / Website Name -->
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-gray-800">MyTravel</a>
+                </div>
+                <!-- Center Menu Items (Desktop) -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 transition duration-300 ease-in-out">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 transition duration-300 ease-in-out">About Us</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 transition duration-300 ease-in-out">Flights</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 transition duration-300 ease-in-out">Hotels</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 transition duration-300 ease-in-out">Contact Us</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 px-3 py-2 transition duration-300 ease-in-out">My Account</a>
+
+                    <!-- Dropdown for Countries -->
+                    <div class="relative group">
+                        <button class="flex items-center text-gray-600 hover:text-blue-600 focus:outline-none transition duration-300 ease-in-out">
+                            <span>India</span>
+                            <svg class="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <!-- Dropdown options -->
+                        <div class="absolute hidden group-hover:block mt-2 w-40 bg-white rounded-md z-10 shadow-lg">
+                            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition duration-300 ease-in-out">Canada</a>
+                            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition duration-300 ease-in-out">US</a>
+                            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition duration-300 ease-in-out">England</a>
+                            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 transition duration-300 ease-in-out">Australia</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call Us Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:999999999" class="bg-orange-500 text-white hover:bg-orange-700 px-4 py-2 rounded-md transition duration-300 ease-in-out">Call Us Now 24/7 999 999 999</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-gray-600 hover:text-blue-600 focus:outline-none transition duration-300 ease-in-out" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Items -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600 transition duration-300 ease-in-out">Home</a>
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600 transition duration-300 ease-in-out">About Us</a>
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600 transition duration-300 ease-in-out">Flights</a>
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600 transition duration-300 ease-in-out">Hotels</a>
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600 transition duration-300 ease-in-out">Contact Us</a>
+            <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600 transition duration-300 ease-in-out">My Account</a>
+            <div class="border-t border-gray-200">
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600 transition duration-300 ease-in-out">Canada</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600 transition duration-300 ease-in-out">US</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600 transition duration-300 ease-in-out">England</a>
+                <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100 hover:text-blue-600 transition duration-300 ease-in-out">Australia</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <section class="relative bg-cover bg-center h-64 sm:h-80 md:h-96" style="background-image: url('images/Blue Texture Vector.svg');">
+        <div class="absolute inset-0 bg-black opacity-0"></div>
+        <div class="flex items-center justify-center h-full relative z-10">
+            <div class="text-center text-white px-4">
+                <h1 class="text-4xl sm:text-5xl md:text-[60px] font-bold mb-2">Your Gateway to</h1>
+                <h1 class="text-5xl sm:text-6xl md:text-6xl font-bold mb-4">Unforgettable Journeys</h1>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Main Content -->
+    <main class="mt-0"> <!-- Removed margin-top to eliminate space between sections -->
+
+        <!-- Our Story -->
+        <section class="py-8">
+            <div class="mx-auto px-4 max-w-5xl"> <!-- Main container with responsive width -->
+
+                <!-- Flex container to align Our Story and paragraph side by side -->
+                <div class="flex flex-col md:flex-row items-start mb-1"> <!-- Further reduced bottom margin -->
+                    <!-- Our Story Div with decreased height -->
+                    <div class="md:w-1/2 mb-4 md:mb-0 h-48 flex flex-col justify-start"> <!-- Changed height from h-72 to h-48 -->
+                        <h2 class="text-5xl font-bold text-gray-800 mt-0 mb-2 pl-4 md:text-left text-center">Our Story</h2>
+                    </div>
+
+                    <!-- Paragraph Div positioned to the right -->
+                    <div class="md:w-1/2 pl-4">
+                        <p class="text-lg text-gray-600">
+                            Founded in 2024, Travel Clue was created to revolutionize the travel booking experience. We believe travel is an adventure that should be accessible to everyone. Our passionate team of travel experts has come together to simplify your journey, providing you with everything you need for an unforgettable trip.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- First Offer Section -->
+                <div class="flex flex-col md:flex-row items-center md:items-start mb-2 p-4"> <!-- Keep bottom margin as is -->
+                    <div class="w-full md:w-[450px] mb-4 md:mb-0 h-20 flex items-center justify-center md:justify-start">
+                        <h2 class="text-xl text-gray-800 text-center md:text-left">Unlock amazing savings on your next flight with us!</h2>
+                    </div>
+
+                    <div class="mt-4 flex justify-center md:justify-start ml-10">
+                        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded block text-center">
+                            Check Out Our Best Flight Deals!
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Second Offer Section -->
+                <div class="flex flex-col md:flex-row items-center md:items-start mb-2 p-4">
+                    <div class="w-full md:w-1/2 mb-4 md:mb-0 h-20 flex items-center justify-center md:justify-start">
+                        <h2 class="text-xl text-gray-800 text-center md:text-left">Find the perfect stay at unbeatable prices!</h2>
+                    </div>
+
+                    <div class="mt-4 flex justify-center md:justify-start ml-2">
+                        <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded block text-center">
+                            Explore Our Best Hotel Deals!
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+        
+        <!-- Why Book with Us -->
+        <section class="py-8 bg-gray-100" style="background-image: url(images/Blue\ Texture\ Vector.svg);">
+            <div class="max-w-5xl mx-auto px-4"> <!-- Main container -->
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8"> <!-- Flex container for heading and paragraph -->
+                    <div class="flex-1 mb-4 md:mr-4"> <!-- Left Side -->
+                        <h2 class="text-3xl font-bold text-gray-800">Why Book</h2> <!-- Heading -->
+                        <h2 class="text-3xl font-bold text-gray-800">With Us?</h2> <!-- Heading -->
+                    </div>
+                    <div class="flex-1"> <!-- Right Side -->
+                        <p class="text-xl text-white">When you choose Travel Clue, you're opting for a seamless and transparent booking experience. Here's what makes us stand out:</p> <!-- Paragraph -->
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4"> <!-- Grid container for cards -->
+                    <div class="bg-white shadow-md p-8 py-10"> <!-- First Card with increased padding -->
+                        <div class="flex flex-col items-center mb-4">
+                            <i class="fas fa-coins fa-3x text-black mb-2"></i> <!-- USA coin with dollar sign and decreasing arrow -->
+                        </div>
+                        <h3 class="text-xl font-bold text-black mb-2 text-center">Unbeatable Deals</h3> <!-- Heading updated to bold -->
+                        <p class="text-black text-left">We scour the market to find the most competitive prices on flights and hotels, ensuring you get maximum value for your money.</p>
+                    </div>
+                    
+                    <div class="bg-white shadow-md p-8 py-10"> <!-- Second Card with increased padding -->
+                        <div class="flex flex-col items-center mb-4">
+                            <i class="fas fa-eye fa-3x text-black mb-2"></i> <!-- Eye icon representing transparency -->
+                        </div>
+                        <h3 class="text-xl font-bold text-black mb-2 text-center">Transparency</h3> <!-- Heading updated to bold -->
+                        <p class="text-black text-left">Our easy-to-use platform offers clear pricing options and detailed booking information, so you always know exactly what you're paying for.</p>
+                    </div>
+                    
+                    <div class="bg-white shadow-md p-8 py-10"> <!-- Third Card with increased padding -->
+                        <div class="flex flex-col items-center mb-4">
+                            <i class="fas fa-shield fa-3x text-black mb-2"></i> <!-- Outlined shield icon for expert support -->
+                        </div>
+                        <h3 class="text-xl font-bold text-black mb-2 text-center">Expert Support</h3> <!-- Heading updated to bold -->
+                        <p class="text-black text-left">Our travel experts are here to provide personalized guidance, ensuring every aspect of your trip is flawlessly planned and tailored to your needs.</p>
+                    </div>
+                    
+                    <div class="bg-white shadow-md p-8 py-10"> <!-- Fourth Card with increased padding -->
+                        <div class="flex flex-col items-center mb-4">
+                            <i class="fas fa-user-friends fa-3x text-black mb-2"></i> <!-- Customer-focused icon -->
+                        </div>
+                        <h3 class="text-xl font-bold text-black mb-2 text-center">Customer-Focused</h3> <!-- Heading updated to bold -->
+                        <p class="text-black text-left">Your satisfaction is our priority. We adapt our services to match your preferences, offering exceptional support throughout your journey.</p>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+        </section>
+
+
+
+
+
+
+
+       <!-- Our Team -->
+       <section class="py-8 bg-gray-100">
+        <div class="max-w-5xl mx-auto px-4"> <!-- Main container with responsive width -->
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Our Team</h2> <!-- Heading -->
+            
+            <div class="flex flex-col md:flex-row md:space-x-4"> <!-- Flex container for left and right divs -->
+                <!-- Left Div -->
+                <div class="flex-1 max-w-[490px] mb-4"> <!-- Meet Founders card -->
+                    <div class="rounded-lg p-4"> <!-- Card without shadow and background -->
+                        <h3 class="text-3xl font-semibold text-gray-800 mb-2">Meet the Founders</h3> <!-- Card Heading -->
+                        <p class="text-2xl text-gray-600 mt-4">Discover the visionaries behind Travel Clue! Our founders have a wealth of experience in the travel industry and a passion for creating exceptional travel experiences. Their commitment to customer satisfaction drives our mission forward.</p> <!-- Paragraph -->
+                    </div>
+                </div>
+                
+    
+                <!-- Right Div -->
+                <div class="flex-1 mb-4 w-full max-w-[300px] md:max-w-[350px] lg:max-w-[400px] relative"> <!-- Increased max-width for large screens -->
+                    <div class="bg-cover bg-center h-[600px] w-full rounded-lg" style="background-image: url('images/blue_texture.png');"> <!-- Increased height -->
+                        <div class="absolute inset-0 flex items-end p-4 bg-black bg-opacity-0"> <!-- Overlay container -->
+                            <h3 class="text-xl font-semibold text-white">Full Name</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        
+        
+        
+        
+    
+        
+    
+    
+    
+    
+    </main>
+
+
+
+
+
+        <!-- ========== FOOTER ========== -->
+        <footer class="footer" style="background-image: url(images/Blue\ Texture\ Vector.svg);">
+            <div class="space-bottom-2 space-top-1">
+                <div class="container">
+                    <div class="flex flex-wrap justify-center pt-8 space-y-4 lg:space-y-0 lg:space-x-8"> <!-- Updated classes for responsiveness -->
+
+                        <!-- About Company -->
+                        <div class="w-full sm:w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px] mb-4 p-4 rounded-lg "> <!-- Adjusted widths for responsiveness -->
+                            <h4 class="h6 font-bold mb-3">About Company</h4>
+                            <ul class="list-group list-group-flush list-group-borderless mb-0">
+                                <li><a class="text-decoration-on-hover list-group-item list-group-item-action" href="about.html">Who We Are</a></li>
+                                <li><a class="text-decoration-on-hover list-group-item list-group-item-action" href="https://transvelo.github.io/mytravel-html/html/others/contact.html">Refunds Terms & Condition</a></li>
+                                <li><a class="list-group-item list-group-item-action text-decoration-on-hover" href="https://transvelo.github.io/mytravel-html/html/others/terms-conditions.html">Privacy Policy</a></li>
+                                <li><a class="list-group-item list-group-item-action text-decoration-on-hover" href="https://transvelo.github.io/mytravel-html/html/others/terms-conditions.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="w-full sm:w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px] mb-4 p-4 rounded-lg "> <!-- Adjusted widths for responsiveness -->
+                            <h4 class="h6 font-bold mb-3">Quick Links</h4>
+                            <ul class="list-group list-group-flush list-group-borderless mb-0">
+                                <li><a class="list-group-item list-group-item-action text-decoration-on-hover" href="https://transvelo.github.io/mytravel-html/html/others/about.html">FAQ</a></li>
+                                <li><a class="list-group-item list-group-item-action text-decoration-on-hover" href="https://transvelo.github.io/mytravel-html/html/others/about.html">Travelogue</a></li>
+                                <li><a class="list-group-item list-group-item-action text-decoration-on-hover" href="https://transvelo.github.io/mytravel-html/html/others/about.html">Modern Slavery Statement</a></li>
+                                <li><a class="list-group-item list-group-item-action text-decoration-on-hover" href="https://transvelo.github.io/mytravel-html/html/others/about.html">Human Right</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Us -->
+                        <div class="w-full sm:w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px] mb-4 p-4 rounded-lg "> <!-- Adjusted widths for responsiveness -->
+                            <h4 class="h6 font-bold mb-3">Contact Us</h4>
+                            <ul class="list-group list-group-flush list-group-borderless mb-0">
+                                <li><p class="text-white">Alpine Close, London</p></li>
+                                <li><p class="text-white">+44 7765091666</p></li>
+                                <li><p class="text-white">email@rediffmail.com</p></li>
+                            </ul>
+                        </div>
+
+
+                        <!-- Let's Get Social -->
+                        <div class="w-full sm:w-[150px] md:w-[200px] lg:w-[250px] xl:w-[300px] mb-4 p-2 rounded-lg"> <!-- Adjusted widths for responsiveness and reduced padding -->
+                            <h4 class="h6 font-weight-bold mb-3 text-white">Let's Get Social</h4>
+                            <ul class="list-inline mb-0 flex"> <!-- Use flex for social links -->
+                                <li class="list-inline-item mr-2">
+                                    <a class="flex justify-center items-center w-8 h-8 rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out transform hover:bg-gray-200 hover:scale-110" href="index.html#">
+                                        <span class="fab fa-facebook-f text-gray-800" aria-hidden="true"></span>
+                                        <span class="sr-only">Facebook</span> <!-- Screen reader text -->
+                                    </a>
+                                </li>
+                                <li class="list-inline-item mr-2">
+                                    <a class="flex justify-center items-center w-8 h-8 rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out transform hover:bg-gray-200 hover:scale-110" href="index.html#">
+                                        <span class="fab fa-twitter text-gray-800" aria-hidden="true"></span>
+                                        <span class="sr-only">Twitter</span> <!-- Screen reader text -->
+                                    </a>
+                                </li>
+                                <li class="list-inline-item mr-2">
+                                    <a class="flex justify-center items-center w-8 h-8 rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out transform hover:bg-gray-200 hover:scale-110" href="index.html#">
+                                        <span class="fab fa-instagram text-gray-800" aria-hidden="true"></span>
+                                        <span class="sr-only">Instagram</span> <!-- Screen reader text -->
+                                    </a>
+                                </li>
+                                <li class="list-inline-item mr-2">
+                                    <a class="flex justify-center items-center w-8 h-8 rounded-full bg-white shadow-md transition-transform duration-300 ease-in-out transform hover:bg-gray-200 hover:scale-110" href="index.html#">
+                                        <span class="fab fa-linkedin-in text-gray-800" aria-hidden="true"></span>
+                                        <span class="sr-only">LinkedIn</span> <!-- Screen reader text -->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Let's Get Social -->
+
+
+                    </div>
+                </div>
+            </div>
+            
+
+
+
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-semibold text-white mb-4 text-left md:ml-28">Get in Touch</h2>
+
+                <p class="text-white mb-6 text-left md:ml-28">We are here to assist you with your travel plans. Please let us know how we can help you!</p>
+                
+                <p class="text-white mb-4 text-left md:ml-28">I would like assistance with:</p>
+                
+                <div class="flex space-x-4 mb-6 md:ml-28 justify-start"> <!-- Align buttons to the left -->
+                    <button class="border border-red-500 text-black bg-white px-4 py-2 rounded-md flex items-center hover:bg-red-500 hover:text-white transition duration-300">
+                        <i class="fas fa-plane mr-1"></i> Flights
+                    </button>
+                    <button class="border border-red-500 text-red-500 px-4 py-2 rounded-md flex items-center hover:bg-red-500 hover:text-white transition duration-300">
+                        <i class="fas fa-hotel mr-1"></i> Hotels
+                    </button>
+                </div>
+
+                <div class="flex flex-col md:flex-row justify-start mb-4 md:ml-28">
+                    <!-- Add responsive margins -->
+                    <div class="relative z-0 w-full md:w-1/4 mb-5 group pr-2">
+                        <h4 class="text-white">My Name is</h4>
+                        <input type="text" name="your_name" id="your_name"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder="Your Name" required />
+                    </div>
+                
+                    <div class="relative z-0 w-full md:w-1/4 mb-5 group">
+                        <h4 class="text-white">Reach me at</h4>
+                        <input type="email" name="your_email" id="your_email"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder="Your@email.com" required />
+                    </div>
+                </div>
+                <!-- Get in Touch -->
+
+                <div class="flex flex-col md:flex-row justify-start mb-4 md:ml-28">
+                    <!-- Add responsive margins -->
+                    <div class="relative z-0 w-full md:w-1/4 mb-5 group pr-2">
+                        <h4 class="text-white">My Phone Number is</h4>
+                        <input type="text" name="your_name" id="your_name"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder="Your Phone Number" required />
+                    </div>
+                
+                    <div class="relative z-0 w-full md:w-1/4 mb-5 group">
+                        <h4 class="text-white">Message</h4>
+                        <input type="email" name="your_email" id="your_email"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-white peer"
+                            placeholder="Start Typing" required />
+                    </div>
+                </div>
+                
+                
+                <div class="flex justify-start md:ml-28 mb-0"> <!-- Align submit button to the left -->
+                    <button class="bg-red-500 text-white px-6 py-2 rounded-md hover:bg-red-600 transition duration-300">
+                        Submit
+                    </button>
+                </div>
+            
+            </div>
+
+
+
+            
+        </footer>
+        <!-- ========== End FOOTER ========== -->
+
+
+
+
+    <script src="script.js"></script>
+
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

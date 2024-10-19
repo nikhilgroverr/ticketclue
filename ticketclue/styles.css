@@ -1,0 +1,598 @@
+/* styles.css */
+
+/* Transition properties for hover effects */
+.icon-block {
+    border: 1px solid #e2e8f0; /* Light gray border */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 1rem; /* Padding around the content */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transitions for scaling and background color */
+}
+
+/* Scale effect on hover */
+.icon-block:hover {
+    transform: scale(1.05); /* Scale up effect */
+    background-color: #f7fafc; /* Change background to light gray on hover */
+}
+
+/* Additional styling for text elements inside the icon block */
+.icon-block h5 {
+    margin: 0.5rem 0; /* Margin for spacing */
+}
+
+.icon-block p {
+    margin: 0; /* Remove default margin */
+}
+
+
+
+
+
+
+        /* Discover Your Dream Destination */
+
+
+
+        .section-heading {
+            color: black; /* Change heading color to black */
+        }        
+
+        .destination-section {
+            text-align: center;
+            padding: 40px; /* Increased padding for better spacing */
+            border-radius: 10px; /* Rounded corners for the section */
+            margin: 20px; /* Margin around the section */
+        }
+
+        .content-container {
+            display: flex; /* Use flexbox layout */
+            justify-content: center; /* Center items horizontally */
+            align-items: center; /* Center items vertically */
+        }
+
+        .left-image-discover,
+        .right-image-discover {
+            border-radius: 8px; /* Rounded corners for divs */
+            margin: 0; /* No margin to remove space */
+            display: flex; /* Use flexbox for centering images */
+            flex-direction: column; /* Stack images vertically */
+            align-items: center; /* Center images horizontally */
+            flex: 0.20; /* Take equal space as per flexbox */
+            max-width: 400px; /* Optional: limit maximum width */
+        }
+
+        .image-container {
+            position: relative; /* Positioning context for the overlay */
+            margin: -10px 0 -10px -35px; /* Top: -10px, Right: 0, Bottom: -10px, Left: 0 */ /* <--- Change Made */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        /* Image styles */
+        .image-one,
+        .image-two {
+            width: 400px; /* Fixed width for all images */
+            height: 250px; /* Fixed height for image one and two */
+            display: block; /* Block display for proper alignment */
+            border-radius: 5px; /* Slightly rounded corners for images */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            transition: transform 0.3s ease; /* Transition effect for hover */
+        }
+
+        /* Set height for image-three to be the combined height of image one and two */
+        .image-three {
+            width: 400px; /* Fixed width for all images */
+            height: 520px; /* Fixed height for image one and two */
+            display: block; /* Block display for proper alignment */
+            border-radius: 5px; /* Slightly rounded corners for images */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+            transition: transform 0.3s ease; /* Transition effect for hover */
+        }
+
+        /* Overlay styles */
+        .overlay {
+            position: absolute;
+            bottom: 10px; /* Position at the bottom of the image */
+            left: 10px; /* Position from the left */
+            padding: 10px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners for overlay */
+            display: flex; /* Flexbox for alignment */
+            align-items: center; /* Center items vertically */
+            transition: transform 0.3s ease; /* Smooth transition for hover effect */
+            box-shadow: none; /* No shadow for overlay */
+        }
+
+        /* Hover effects for images and overlay */
+        .image-container:hover .overlay {
+            transform: scale(1.05); /* Enlarge the overlay text on hover */
+        }
+
+        .image-container:hover .image-one,
+        .image-container:hover .image-two,
+        .image-container:hover .image-three {
+            transform: scale(1.05); /* Enlarge the images on hover */
+        }
+
+        /* Image title styles */
+        .image-title {
+            margin-right: 5px; /* Space between title and arrow */  
+            transition: transform 0.3s ease; /* Smooth transition for hover */
+            font-size: 25px; /* Adjusted size for the image title */
+        }
+
+        /* Apply hover effect to image title */
+        .image-container:hover .image-title {
+            transform: scale(1.05); /* Enlarge the title text on hover */
+        }
+
+
+
+
+
+
+        /* Explore Travel Categories */
+
+        /* Global Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+
+
+        
+        /* Travel Categories Section */
+            
+            .travel-categories {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 50px;
+            }
+
+            .content {
+                max-width: 500px;
+            }
+
+            /* Headings */
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 10px;
+            }
+
+            /* Paragraph Styles */
+            p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+                line-height: 1.5;
+            }
+
+            /* Buttons Section */
+            .buttons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .buttons button {
+                background-color: white;
+                color: #333;
+                border: none;
+                padding: 10px 20px;
+                font-size: 1rem;
+                border-radius: 20px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .buttons button:hover {
+                background-color: #ff6600;
+                color: white;
+            }
+
+            /* Discover More Button */
+            .discover-more {
+                margin-top: 20px;
+                background-color: #ff6600;
+                color: white;
+                border: none;
+                padding: 15px 30px;
+                font-size: 1.2rem;
+                border-radius: 30px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+            .discover-more:hover {
+                background-color: #cc5200;
+            }
+
+            .right-section img {
+                width: 180px; /* Width of images */
+                height: 400px; /* Height of images */
+                object-fit: cover; /* Ensure image fits within the defined dimensions */
+                border-radius: 10px; /* Optional: Rounded corners for images */
+                box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+            }
+
+            /* Responsive behavior for smaller screens */
+            @media (max-width: 768px) {
+                .content-container {
+                    flex-direction: column; /* Stack sections on top of each other */
+                }
+                
+                .left-section {
+                    width: 100%; /* Full width for left section on smaller screens */
+                    margin-right: 0; /* Remove margin on smaller screens */
+                    margin-bottom: 20px; /* Add space below left section */
+                }
+
+                .right-section {
+                    width: 100%; /* Full width for images section */
+                    justify-content: center; /* Center the images */
+                }
+
+                .right-section img {
+                    width: 100%; /* Make images take full width */
+                    height: auto; /* Adjust height to maintain aspect ratio */
+                }
+
+            }
+
+
+            /* Button Container */
+            
+            .discover-more {
+                background-color: #ff6600; /* Blue background for "Discover More" */
+            }
+
+            .discover-more:hover {
+                background-color: #0056b3; /* Darker blue on hover */
+            }
+
+            
+            /* Images Section */
+
+            .image-section {
+                display: flex;
+                justify-content: center; /* Centers the content horizontally */
+                align-items: center; /* Vertically aligns the items */
+            }
+
+            .right-section {
+                display: flex; /* Ensures the images are in a row */
+                flex-wrap: nowrap; /* Prevents wrapping to the next line */
+                gap: 0; /* Set to 0 to remove space between images */
+                position: relative;
+            }
+            
+            .right-section img {
+                height: 400px;
+                width: 160px;
+                margin: 0; /* Remove margin from images */
+                transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for transform and filter */
+            }
+            
+           
+            
+
+            .right-section img:hover {
+                transform: scale(1.1); /* Slightly enlarge the image */
+                filter: brightness(90%); /* Darken the image on hover */
+            }
+
+            /* Optional: If images still have space, ensure no padding/margin in container */
+            .image-container {
+                position: relative;
+                padding: 8px; /* Ensure no padding around image container */
+                margin: 0; /* Ensure no margin around image container */
+            }
+            
+            .image-heading {
+                position: absolute;
+                bottom: 10px; /* Move the heading slightly above the bottom */
+                left: 50%;
+                transform: translateX(-50%); /* Center the heading horizontally */
+                color: white;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                width: 100%;
+                padding: 10px 0;
+                pointer-events: none; /* Disable interaction with the heading */
+                transition: transform 0.3s ease, filter 0.3s ease; /* Add smooth transition for heading */
+            }
+
+             /* On hover, move heading up slightly */
+             .inspiration-item:hover .image-heading {
+                transform: translateX(-50%) translateY(-5px); /* Move the heading up slightly on hover */
+            }
+            
+            /* Apply hover effect to both the image and the heading */
+            .image-container:hover img {
+                transform: scale(1.1); /* Slightly enlarge the image */
+                filter: brightness(90%); /* Darken the image */
+            }
+            
+            .image-container:hover .image-heading {
+                transform: translate(-50%, -50%) scale(1.5); /* Move the heading slightly upward and enlarge */
+                filter: brightness(90%); /* Darken the heading */
+            }
+
+
+
+
+            
+   /* Travel Inspiration Section */
+        
+        .travel-inspiration {
+            background-color: #f9f9f9; /* Light background for contrast */
+            padding: 50px 20px; /* Padding for spacing */
+            text-align: center; /* Center text */
+        }
+
+        .travel-inspiration h2 {
+            font-family: 'Arial', sans-serif; /* Font style */
+            font-size: 36px; /* Heading size */
+            color: #333; /* Dark text color */
+            margin-bottom: 40px; /* Space below heading */
+        }
+
+        .inspiration-container {
+            display: flex; /* Flexbox for layout */
+            justify-content: center; /* Center items */
+            gap: 20px; /* Add gap between images */
+            max-width: 1200px; /* Maximum width of the container */
+            margin: 0 auto; /* Center the container */
+            opacity: 0; /* Hide initially */
+            transition: opacity 0.5s ease; /* Smooth transition for opacity */
+        }
+
+        /* Inspiration Items */
+        .inspiration-item {
+            width: 50%; /* Set width of each item to 50% */
+            text-align: center; /* Center align text and button */
+            position: relative; /* For positioning overlay */
+            position: relative; /* For positioning overlay */
+            overflow: hidden; /* Hide overflow for image effects */
+        
+        }
+
+        .image-container {
+            position: relative; /* For positioning overlay text */
+        }
+
+        /* Ensure overlay text is part of the image container */
+        .image-container:hover .overlay-text {
+            transform: translateX(-50%) scale(1.1); /* Scale up on hover */
+            color: #ffcc00; /* Change text color on hover */
+        }
+
+        .inspiration-image {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            margin-bottom: 15px; /* Space below the image */
+            transform: translateX(100%); /* Start right image off-screen right */
+            transition: transform 0.5s ease; /* Smooth transition for sliding */
+        }
+        
+        /* Animation classes */
+        .inspiration-image.show {
+            transform: translateX(0); /* Slide into view */
+        }
+        
+
+        .left-image {
+            transform: translateX(-30%); /* Start left image off-screen left */
+        }
+
+        .left-image.show {
+            transform: translateX(0); /* Slide in from left */
+        }
+
+        .right-image {
+            transform: translateX(20%); /* Start right image off-screen right */
+        }
+
+        .right-image.show {
+            transform: translateX(0); /* Slide in from right */
+        }
+
+            
+        /* Overlay Text Styles */
+        
+        .overlay-text {
+            position: absolute;
+            bottom: 40px; /* Adjusted initial distance from the bottom */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center horizontally */
+            font-size: 24px; /* Larger font size */
+            font-weight: bold; /* Bold text */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
+            color: #fff; /* Ensure text color is white */
+            transition: bottom 0.3s ease, color 0.3s ease; /* Smooth transition for bottom and color */
+        }
+
+        /* On hover, move text up slightly */
+        .inspiration-item:hover .overlay-text {
+            bottom: 50px; /* Move text up slightly on hover */
+            color: #fff; /* Ensure text color remains white on hover */
+        }
+
+
+        /* Button Container */
+        .button-container {
+            margin-top: 20px; /* Space above the button */
+        }
+
+        .action-button {
+            background-color: #ff4500; /* Orange background for buttons */
+            color: white; /* White text */
+            border: none; /* No border */
+            padding: 10px 20px; /* Padding for buttons */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transition for shadow and movement effects */
+        }
+
+        .action-button:hover {
+            box-shadow: 0 8px 15px rgba(255, 69, 0, 0.5); /* Shadow on hover */
+            transform: translateY(-2px); /* Slight upward movement */
+        }
+
+
+
+
+        
+    /* What Our Travelers Are Saying */
+
+        :root {
+            --testimonial-image-width: 350px; /* Default width */
+            --testimonial-image-height: 350px; /* Default height */
+        }
+        
+        .traveler-testimonials {
+            display: flex; /* Use flexbox for layout */
+            flex-direction: column; /* Align children in a column */
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            height: 650px; /* Set a fixed height for the section */
+            text-align: center; /* Center the title */
+            padding: 50px 20px; /* Padding for the section */
+            background-image: url(images/Blue\ Texture\ Vector.svg);
+        }
+        
+        .testimonial-block {
+            display: flex; /* Flexbox for layout */
+            align-items: stretch; /* Stretch items to have the same height */
+            background-color: white; /* Background color */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            overflow: hidden; /* Hide overflow */
+            width: 1350px; /* Adjust width as necessary */
+            max-width: 90%; /* Responsive max-width */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+        }
+        
+        .testimonial-block:hover {
+            transform: translateY(-5px); /* Slightly lift the block */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        }
+        
+        .testimonial-image {
+            width: var(--testimonial-image-width); /* Use CSS variable for width */
+            height: var(--testimonial-image-height); /* Use CSS variable for height */
+            overflow: hidden; /* Hide overflow */
+            flex-shrink: 0; /* Prevent shrinking */
+        }
+        
+        .testimonial-image img {
+            width: 100%; /* Full width for the image */
+            height: 100%; /* Full height to cover the container */
+            object-fit: cover; /* Cover the area without distortion */
+            display: block; /* Ensure there's no extra space below the image */
+        }
+        
+        .testimonial-content {
+            flex: 1; /* Take the available space */
+            padding: 20px; /* Padding inside the content */
+            text-align: left; /* Left-align the text */
+        }
+        
+        .star-rating {
+            font-size: 24px; /* Font size for the star rating */
+            color: gold; /* Color for the stars */
+            margin-bottom: 10px; /* Space below the rating */
+        }
+        
+        .testimonial-description {
+            font-size: 16px; /* Font size for the description */
+            color: #333; /* Darker text color */
+            margin-bottom: 20px; /* Space below the description */
+        }
+        
+        .traveler-info {
+            display: flex; /* Flexbox for layout */
+            flex-direction: column; /* Align items vertically */
+            gap: 10px; /* Space between items */
+        }
+        
+        .traveler-name,
+        .traveler-location,
+        .traveler-date {
+            font-size: 16px; /* Font size for traveler info */
+            color: black; /* Color for traveler info */
+        }
+        
+        .traveler-name i,
+        .traveler-location i,
+        .traveler-date i {
+            margin-right: 5px; /* Space between icon and text */
+            color: black; /* Color for icons */
+        }
+
+
+        /* About Us */
+
+        @media (max-width: 768px) {
+            .flex-col {
+                display: flex; /* Ensure flex is enabled */
+                flex-direction: column; /* Stack items vertically */
+                align-items: center; /* Center all items in the flex column */
+                text-align: center; /* Center text for better alignment */
+            }
+        
+            .md\:w-1\/2 {
+                width: 100%; /* Ensure full width for children on small screens */
+            }
+        }
+        
+        
+        @keyframes slide-in-left {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slide-in-right {
+            0% {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .animate-slide-in-left {
+            animation: slide-in-left 3s forwards; /* Increased to 1 second */
+        }
+        
+        .animate-slide-in-right {
+            animation: slide-in-right 3s forwards; /* Increased to 1 second */
+            animation-delay: 0.3s; /* Adjust delay time as needed */
+        }
+        
